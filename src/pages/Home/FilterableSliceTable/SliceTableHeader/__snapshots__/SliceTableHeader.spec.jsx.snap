@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Table Header SnapShot testing 1`] = `
+<DocumentFragment>
+  <table>
+    <thead
+      class="af-table-thead"
+    >
+      <tr
+        class="af-table__tr"
+      >
+        <th
+          class="af-table__th"
+        >
+          <span
+            class="af-table-th-content"
+          >
+            Tranches
+          </span>
+        </th>
+        <th
+          class="af-table__th"
+        >
+          <span
+            class="af-table-th-content"
+          >
+            Taux d'imposition
+          </span>
+        </th>
+      </tr>
+    </thead>
+  </table>
+</DocumentFragment>
+`;
