@@ -5,7 +5,7 @@ const PLAFOND_DEMI_PART = 1567;
  *  Permet de convertir en pourcentage un float
  * @param n
  */
-const toPercent = (n) => Math.trunc(n * 10000) / 100;
+const toPercent = n => Math.trunc(n * 10000) / 100;
 
 /**
  * Cacul le nombre de part en fonction du nombre d'adulte ou d'enfant
@@ -82,7 +82,7 @@ const CreerTanchesParAnnee = () => {
   };
 };
 
-const getTranchesParAnnee = (annee) => {
+const getTranchesParAnnee = annee => {
   const tranchesParAnnee = CreerTanchesParAnnee();
 
   return tranchesParAnnee[annee];
@@ -120,7 +120,7 @@ const calculImpotParTranche = (salaireBrut, nbParts, annee) => {
  *
  * @param nbPart
  */
-const calculMajorationQuotienFamilial = (nbPart) => 2 * (nbPart - 2);
+const calculMajorationQuotienFamilial = nbPart => 2 * (nbPart - 2);
 
 /**
  *
@@ -133,8 +133,7 @@ export const computeTaxeService = (
   salaryAmount,
   adultNumber,
   numberOfChildren,
-  year,
-  myFunction
+  year
 ) => {
   const numberOfShares = calculerNbParts(adultNumber, numberOfChildren);
   const calcul1 = calculImpotParTranche(salaryAmount, numberOfShares, year);
@@ -148,7 +147,6 @@ export const computeTaxeService = (
       taxAmount = calcul2;
     }
   }
-  myFunction && myFunction("toto");
   return {
     taxAmount: Math.trunc(taxAmount),
     taxRate: toPercent(taxAmount / salaryAmount),
