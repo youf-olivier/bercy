@@ -1,9 +1,9 @@
-import React from 'react';
-import { Title } from '@axa-fr/react-toolkit-all';
-import Home from 'pages/Home/Home';
-import HeaderLayout from 'layout/Header/HeaderLayout';
-import FooterLayout from 'layout/Footer/FooterLayout';
-import './App.css';
+import React from "react";
+import { Title } from "@axa-fr/react-toolkit-all";
+import Home from "pages/Home/Home";
+import HeaderLayout from "layout/Header/HeaderLayout";
+import FooterLayout from "layout/Footer/FooterLayout";
+import "./App.css";
 
 const App = () => (
   <>

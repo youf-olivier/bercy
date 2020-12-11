@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Text,
   SelectBase,
   Button,
   Alert,
   Loader,
-} from '@axa-fr/react-toolkit-all';
-import { calculerNbParts } from '../../../shared/taxComputer.helper';
-import './TaxComputationForm.css';
+} from "@axa-fr/react-toolkit-all";
+import { calculerNbParts } from "../../../shared/taxComputer.helper";
+import "./TaxComputationForm.css";
 
 export const TaxComputationForm = ({
   taxRateSetter,
@@ -18,7 +18,7 @@ export const TaxComputationForm = ({
   const [salaryAmount, setSalaryAmount] = useState(0);
   const [numberOfChildren, setNumberOfChildren] = useState(0);
   const [year, yearSetter] = useState(2020);
-  const [modeSpinner, setModeSpinner] = useState('none');
+  const [modeSpinner, setModeSpinner] = useState("none");
   const [isErrorRequest, setIsErrorRequest] = useState(false);
 
   const computeTaxeHandler = () => {
@@ -31,16 +31,16 @@ export const TaxComputationForm = ({
       },
     };
 
-    setModeSpinner('post');
-    fetch('/TaxComputer', {
-      method: 'POST',
+    setModeSpinner("post");
+    fetch("/TaxComputer", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(input),
     })
-      .then(response => response.json())
-      .then(json => {
+      .then((response) => response.json())
+      .then((json) => {
         taxRateSetter(json.marginalTaxRate);
         taxAmountSetter(json.amount);
         setIsErrorRequest(false);
@@ -48,7 +48,7 @@ export const TaxComputationForm = ({
       .catch(() => {
         setIsErrorRequest(true);
       })
-      .finally(() => setModeSpinner('none'));
+      .finally(() => setModeSpinner("none"));
 
     numberOfSharesSetter(calculerNbParts(adultNumber, numberOfChildren));
   };
@@ -114,8 +114,8 @@ export const TaxComputationForm = ({
                 key="key"
                 name="year"
                 options={[
-                  { value: '2019', label: '2019' },
-                  { value: '2020', label: '2020' },
+                  { value: "2019", label: "2019" },
+                  { value: "2020", label: "2020" },
                 ]}
                 value={year}
                 onChange={({ value }) => yearSetter(parseInt(value) || 0)}
@@ -127,7 +127,8 @@ export const TaxComputationForm = ({
           <Button
             classModifier="hasiconLeft"
             id="validation-button"
-            onClick={computeTaxeHandler}>
+            onClick={computeTaxeHandler}
+          >
             <span className="af-btn__text">Calculer</span>
             <i className="glyphicon glyphicon-stats" />
           </Button>

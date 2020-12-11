@@ -16,12 +16,21 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "lint": "eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json)\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js?(x)"
+        ]
+      }
     ]
   },
   "browserslist": [
@@ -53,6 +62,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/react-hooks": "^3.7.0",
     "@testing-library/user-event": "^12.5.0",
+    "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1"
   }
 }

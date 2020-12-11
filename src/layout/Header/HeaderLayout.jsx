@@ -1,5 +1,5 @@
-import React from 'react';
-import { Header, Name } from '@axa-fr/react-toolkit-all';
+import React from "react";
+import { Header, Name } from "@axa-fr/react-toolkit-all";
 
 const HeaderLayout = () => (
   <Header>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { SelectBase } from '@axa-fr/react-toolkit-all';
+import React from "react";
+import { SelectBase } from "@axa-fr/react-toolkit-all";
 
 export const SliceYearSelect = ({ selectedYear, setSelectedYear }) => {
   return (
@@ -9,8 +9,8 @@ export const SliceYearSelect = ({ selectedYear, setSelectedYear }) => {
         key="key"
         name="name"
         options={[
-          { value: '2019', label: '2019' },
-          { value: '2020', label: '2020' },
+          { value: "2019", label: "2019" },
+          { value: "2020", label: "2020" },
         ]}
         value={selectedYear}
         onChange={({ value }) => setSelectedYear(value)}
