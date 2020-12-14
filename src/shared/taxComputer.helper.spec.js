@@ -1,4 +1,5 @@
-import { calculerNbParts, computeTaxeService } from "./taxComputer.helper";
+// Jest Exercice 1
+// import { calculerNbParts, computeTaxeService } from "./taxComputer.helper";
 
 describe("TaxComputer tests suite", () => {
   describe("calculerNbParts tests suite", () => {

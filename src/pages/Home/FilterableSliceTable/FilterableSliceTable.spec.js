@@ -1,7 +1,10 @@
-import { getSlices } from "./FilterableSliceTable.service";
+// import React from "react";
+// import { render, screen, waitFor } from "@testing-library/react";
+// import { FilterableSliceTable } from "./FilterableSliceTable";
+// import "@testing-library/jest-dom";
 
-describe("FilterableSliceTable service tests suite", () => {
-  it("getSlices doit appeler l'API avec la bonne url", () => {
-    // 🎯 Il va falloir mocker Fetch.
+describe("FilterableSliceTable tests suite", () => {
+  it("Le tableau doit rendre les nouvelles valeurs quand on change la selection de la liste déroulante", async () => {
+    // 🎯 Ici on va tester l'asynchrone, donc le test est asynchrone !!
   });
 });

@@ -5,15 +5,15 @@ import { SliceTableHeader } from "pages/Home/FilterableSliceTable/SliceTableHead
 import { SliceTableRow } from "pages/Home/FilterableSliceTable/SliceTableRow/SliceTableRow";
 import { getSlices } from "pages/Home/FilterableSliceTable/FilterableSliceTable.service";
 
-export const FilterableSliceTable = () => {
+export const FilterableSliceTable = ({ getSlicesInjected = getSlices }) => {
   const [selectedYear, setSelectedYear] = useState("2020");
   const [selectedTranches, setSelectedTranches] = useState([]);
 
   useEffect(() => {
-    getSlices(selectedYear).then((slices) => {
+    getSlicesInjected(selectedYear).then((slices) => {
       setSelectedTranches(slices);
     });
-  }, [selectedYear]);
+  }, [selectedYear, getSlicesInjected]);
 
   return (
     <section className="af-panel">

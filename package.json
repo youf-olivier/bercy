@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "5.11.6",
     "@testing-library/react": "11.2.2",
     "@testing-library/react-hooks": "3.7.0",
+    "@testing-library/user-event": "12.6.0",
     "create-react-context": "0.3.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "7.0.0",
@@ -34,11 +35,18 @@
     ],
     "overrides": [
       {
-        "files": ["**/*.js?(x)"]
+        "files": [
+          "**/*.js?(x)"
+        ]
       }
     ]
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
