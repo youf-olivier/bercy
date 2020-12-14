@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliceTableRow tests suite SliceTableRow should render without crashing 1`] = `
+<DocumentFragment>
+  <span
+    aria-label="tranche"
+    class="af-table-body-content"
+  >
+    de 200€ à 50000€
+  </span>
+  <span
+    aria-label="taux imposition"
+  >
+    <b>
+      2%
+    </b>
+  </span>
+</DocumentFragment>
+`;
